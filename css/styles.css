@@ -46,6 +46,11 @@ textarea {
     resize: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* СТУДИЯ */
 
 /* Header */
@@ -848,6 +853,8 @@ textarea {
     border-radius: 4px;
 
     background-color: transparent;
+
+    color: #fff;
 }
 
 .subscribe-btn {
@@ -946,6 +953,12 @@ textarea {
     width: 11px;
 
     fill: #000;
+
+    transition: fill var(--animation);
+}
+
+.modal-icon:hover > .modal-close {
+    fill: #2196F3;
 }
 
 .form-title {
@@ -961,10 +974,20 @@ textarea {
 }
 
 .form-field {
+    position: relative;
     display: flex;
     flex-direction: column;
 
     margin-bottom: 10px;
+}
+
+.icon-modal {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+
+    width: 18px;
+    height: 18px;
 }
 
 .form-field:last-child {
@@ -980,14 +1003,37 @@ textarea {
     margin-bottom: 30px;
 }
 
-.form-checkbox label {
-    margin-left: 7px;
-
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
+.form-checkbox > label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
     
     color: #757575;
+}
+
+.policy-link {
+    padding-left: 2px;
+    text-decoration-line: underline;
+
+    color: #2196F3;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    position: absolute;
+}
+
+.checkbox:checked + .icon-check {
+    width: 16px;
+    height: 15px;
+    background: #2196F3;
+    border-radius: 2px;
+    border: transparent;
 }
 
 .form-label {
@@ -1002,15 +1048,47 @@ textarea {
 
 .form-input {
     margin: 0;
-    padding: 12px 0px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+    padding-right: 16px;
+
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    transition: border var(--animation);
+    transition: fill var(--animation);
 }
 
-.form-input::placeholder {
-    font-size: 12px;
-    line-height: 1.16px;
-    letter-spacing: 0.01em;
+.form-input:focus {
+    border: 1px solid rgba(33, 150, 243, 1);
+}
+
+.form-input:focus + .icon-modal {
+    fill: #2196F3;
+}
+
+.textarea-input {
+    margin: 0;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: border var(--animation);
+}
+
+.textarea-input:focus {
+    border: 1px solid rgba(33, 150, 243, 1);
+}
+
+.icon-check {
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid #212121;
+    border-radius: 1px;
+
+    margin-right: 8px;
 }
 
 .submit-btn {

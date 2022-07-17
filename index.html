@@ -477,22 +477,31 @@
           <div class="form-field">
             <label class="form-label" for="name">Имя</label>
             <input class="form-input" type="text" name="name" id="name" />
+            <svg class="icon-modal">
+              <use href="./images/icons.svg#icon-person-black"></use>
+            </svg>
           </div>
 
           <div class="form-field">
             <label class="form-label" for="tel">Телефон</label>
             <input class="form-input" type="tel" name="tel" id="tel" />
+            <svg class="icon-modal">
+              <use href="./images/icons.svg#icon-phone-black"></use>
+            </svg>
           </div>
 
           <div class="form-field">
             <label class="form-label" for="mail">Почта</label>
             <input class="form-input" type="email" name="mail" id="mail" />
+            <svg class="icon-modal">
+              <use href="./images/icons.svg#icon-email-black"></use>
+            </svg>
           </div>
 
           <div class="form-field">
             <label class="form-label" for="comment">Комментарий</label>
             <textarea
-              class="form-input"
+              class="textarea-input"
               name="comment"
               id="comment"
               rows="5"
@@ -501,10 +510,13 @@
           </div>
 
           <div class="form-checkbox">
-            <input type="checkbox" name="checkbox" id="checkbox" value="policy" />
-            <label for="checkbox"
-              >Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label
-            >
+            <label>
+              <input class="checkbox" type="checkbox" name="checkbox" value="policy" />
+              <svg class="icon-check">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+              Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="">Условия договора</a>
+            </label>
           </div>
 
           <button type="submit" class="submit-btn">Отправить</button>
