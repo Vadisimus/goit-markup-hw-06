@@ -722,9 +722,9 @@ a {
     background-color: var(--bg-color-2);
 }
 
-.container.footer {
-    padding: 0;
+.footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 /* лого*/
@@ -780,8 +780,7 @@ a {
 /* присоединяйтесь */
 
 .social {
-    margin-top: 12px;
-    margin-left: 70px;
+    margin-left: auto;
 }
 
 .social-media-title {
